@@ -21,14 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Android SDK
-        run: |
-          export ANDROID_HOME=$HOME/android-sdk
-          mkdir -p $ANDROID_HOME
-          wget -q https://dl.google.com/android/repository/commandlinetools-linux-8512546_latest.zip -O /tmp/cmdline-tools.zip
-          unzip -q /tmp/cmdline-tools.zip -d $ANDROID_HOME
-          mv $ANDROID_HOME/cmdline-tools $ANDROID_HOME/tools
-          export PATH=$ANDROID_HOME/tools/bin:$PATH
-          sdkmanager --install "platforms;android-31" "build-tools;31.0.0"
+        uses: android-actions/setup-android@v3
 
       - name: Grant execute permission
         run: chmod +x gradlew
