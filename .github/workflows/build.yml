@@ -20,9 +20,8 @@ jobs:
           java-version: '16'
           distribution: 'temurin'
 
-      - name: Install Android SDK
-        run: |
-          echo "y" | sdkmanager "build-tools;31.0.0" "platforms;android-31"
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
       - name: 赋予gradlew执行权限
         run: chmod +x gradlew
