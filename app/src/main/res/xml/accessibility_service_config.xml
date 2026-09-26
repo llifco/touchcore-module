@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeViewClicked|typeViewHoverEnter|typeTouchInteractionStart|typeTouchInteractionEnd"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:canRetrieveWindowContent="false"
+    android:description="粉雾触摸特效核心服务"
+    android:notificationTimeout="0"
+    android:canPerformGestures="false" />
